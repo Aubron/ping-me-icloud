@@ -7,6 +7,7 @@
     "@folk-org/apple-icloud": "^1.0.2"
   },
   "devDependencies": {
+    "serverless": "^1.60.4",
     "serverless-dotenv-plugin": "^2.1.1",
     "serverless-offline": "^6.0.0-alpha.56"
   },
