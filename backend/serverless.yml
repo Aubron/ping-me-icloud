@@ -48,8 +48,11 @@ provider:
 #            - "/*"
 
 # you can define service wide environment variables here
-#  environment:
-#    variable1: value1
+  environment:
+    ICLOUD_PASSWORD: ${env:ICLOUD_PASSWORD}
+    ICLOUD_USERNAME: ${env:ICLOUD_USERNAME}
+    ICLOUD_DEVICE_ID: ${env:ICLOUD_DEVICE_ID}
+    SECRETS: ${env:SECRETS}
 
 # you can add packaging information here
 #package:
