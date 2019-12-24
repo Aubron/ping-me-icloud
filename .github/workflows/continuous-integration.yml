@@ -11,8 +11,8 @@ jobs:
     - uses: actions/checkout@master
     - uses: borales/actions-yarn@v2.0.0
       working-directory: ./backend
-        with:
-          cmd: install # will run `yarn install` command
+      with:
+        cmd: install # will run `yarn install` command
     - name: serverless deploy
       working-directory: ./backend
       uses: serverless/github-action@master
