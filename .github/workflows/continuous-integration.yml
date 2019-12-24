@@ -10,14 +10,14 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - uses: borales/actions-yarn@v2.0.0
-      working-directory: ./backend
       with:
         cmd: install # will run `yarn install` command
+        working-directory: ./backend
     - name: serverless deploy
-      working-directory: ./backend
       uses: serverless/github-action@master
       with:
         args: deploy
+        working-directory: ./backend
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
