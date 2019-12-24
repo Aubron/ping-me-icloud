@@ -13,6 +13,8 @@ jobs:
       uses: actions/setup-node@v1
     - run: yarn install
       working-directory: ./backend
+    - run: yarn global install serverless
+      working-directory: ./backend
     - run: serverless deploy
       working-directory: ./backend
       env:
