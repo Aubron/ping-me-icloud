@@ -22,6 +22,10 @@ module.exports.ping = async event => {
     await myCloud.FindMe.playSound(process.env.ICLOUD_DEVICE_ID)
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
+      },
       body: JSON.stringify(
         {
           message: 'Message successfully sent.',
@@ -35,6 +39,10 @@ module.exports.ping = async event => {
   
   return {
     statusCode: 401,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
     body: JSON.stringify(
       {
         message: 'Unauthorized',
