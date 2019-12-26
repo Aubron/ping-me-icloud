@@ -68,7 +68,7 @@ function App({classes}) {
         }
         <TextField id="outlined-basic" label="Password" variant="outlined" className={classes.input} fullWidth value={password} onChange={handleChange}/>
         <Button variant="contained" color="primary" fullWidth onClick={handleClick} disabled={(password === "")}>
-          Primary
+          Send Ping
         </Button>
       </Paper>
     </div>
