@@ -15,7 +15,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "deploy-aws-s3-cloudfront --source ./build/ --cache-control-no-cache index.html --bucket ping.aubron.io --distribution E37VHDTM6E2MVG --invalidation-path ./index.html"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +32,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "deploy-aws-s3-cloudfront": "^2.3.1"
   }
 }
