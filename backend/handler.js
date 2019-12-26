@@ -19,7 +19,7 @@ module.exports.ping = async event => {
 
   if (secrets.indexOf(body.secret) !== -1) {
     const myCloud = await createiCloudAsync(username,password);
-    myCloud.FindMe.playSound(process.env.ICLOUD_DEVICE_ID)
+    await myCloud.FindMe.playSound(process.env.ICLOUD_DEVICE_ID)
     return {
       statusCode: 200,
       body: JSON.stringify(
